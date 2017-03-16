@@ -41,6 +41,9 @@ router.get('/auth/facebook/callback', passport.authenticate('facebook',
 });
 
 //Ruta Análisis de imagen
-router.get('/detectingImage/:url', function(req, res) {
-  res.render('pages/detectingImage');
+router.get('/detectingImage', function(req, res) {
+  var value = req.param('pic')
+  res.render('pages/detectingImage', {
+      photo: value
+  });
 });

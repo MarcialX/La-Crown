@@ -10,6 +10,9 @@ var UserSchema = new Schema({
 	provider: String,
 	provider_id: {type: String, unique: true},
 	photo: String,
+	albumPhoto: [{
+		type: String
+	}],
 	createdAt: {type: Date, default: Date.now}
 });
 
