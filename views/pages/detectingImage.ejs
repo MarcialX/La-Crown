@@ -6,5 +6,9 @@
 	<img class="img-rounded" src="<%= photo %>" width="600" height="450">
 	<br>
 	<br>
-	<button type="button" class="btn btn-primary">Crea un video con esta foto</button>
+
+	<form action="/detectingImage" method="post">
+		<button name="photo" value="<%= photo %>" class="btn btn-primary">Crea un video con esta foto</button>
+	</form>
+
 </div>
